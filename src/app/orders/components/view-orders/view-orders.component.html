@@ -1,0 +1,122 @@
+<div class="container">
+  <!-- <img src="assets/images/order.jpg" height=400px width=300px class="card-img-top" alt="HTML"> -->
+
+  <!-- <button
+      (click)="addorders(id.value, name.value, age.value, species.value)"
+      class="btn btn-outline-info"
+    >
+      Add order
+    </button> -->
+
+  <!-- <div class="container">
+      <div class="input-group">
+        <label class="input-group__label" for="myInput">My Label</label>
+        <input
+          type="text"
+          id="myInput"
+          class="input-group__input"
+          value="This is my input"
+        />
+      </div>
+    </div>
+    <br /> -->
+
+  <!-- <div class="form-group">
+    <label for="id">ID</label>
+    <p>
+      <span class="input">
+        <input
+          type="text"
+          id="id"
+          placeholder="Gradient border focus fun"
+          #id
+        />
+        <span></span>
+      </span>
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <p>
+      <span class="input">
+        <input
+          type="text"
+          id="name"
+          placeholder="Gradient border focus fun"
+          #name
+        />
+        <span></span>
+      </span>
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="age">Color</label>
+    <p>
+      <span class="input">
+        <input
+          type="text"
+          id="age"
+          placeholder="Gradient border focus fun"
+          #age
+        />
+        <span></span>
+      </span>
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="species">species</label>
+    <p>
+      <span class="input">
+        <input
+          type="text"
+          id="species"
+          placeholder="Gradient border focus fun"
+          #species
+        />
+        <span></span>
+      </span>
+    </p>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-success"
+    (click)="addorders(id.value, name.value, age.value, species.value)"
+  >
+    Save
+  </button> -->
+  <!-- <button type="submit" class="btn btn-success"  (click)="updateorder(order.id, jdata)">Update order</button> -->
+  <!-- <p>order.items|json</p> -->
+  <div class="card-container">
+    <div *ngFor="let order of orders" class="card">
+      <div class="card-body">
+        <div class="one">
+          <p class="card-text">{{ order.id }}</p>
+          <h5 class="card-title">{{ order.orderNo }}</h5>
+        </div>
+        <div class="one">
+          <p class="card-text">{{ order.contactName }}</p>
+          <p class="card-text">{{ order.orderDate }}</p>
+        </div>
+        <div class="one">
+          <p class="card-text">{{ order.orderTotal }}</p>
+          <p class="card-text">{{ order.taxTotal }}</p>
+        </div>
+        <div class="one">
+          <p class="card-text">{{ order.grandTotal }}</p>
+          <p class="card-text">{{ order.itemsOrdered }}</p>
+        </div>
+
+       
+          <!-- <button
+            class="btn btn-outline-warning"
+            (click)="updatefetch(order.id)"
+          >
+            update
+          </button> -->
+       
+      </div>
+    </div>
+  </div>
+</div>
+<header></header>
+<router-outlet> </router-outlet>

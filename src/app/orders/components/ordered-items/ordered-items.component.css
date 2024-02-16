@@ -1,0 +1,156 @@
+.order {
+    margin-top: 40%;
+    margin-left: 20%;
+    text-align: center;
+}
+heading{
+    display: flex;
+    justify-content: space-between;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-; */
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+ 
+  .card {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+  }
+ 
+  .card-body {
+    padding: 15px;
+  }
+ 
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+ 
+  .card-text {
+    font-size: 14px;
+    color: #666;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+  .one{
+    display: flex;
+    justify-content: space-between;
+  }
+  .input {
+	
+	
+	position:relative;
+	
+	font-size: 1.5em;
+	
+
+	background: linear-gradient(21deg, #10abff, #1beabd);
+	
+
+	padding: 3px;
+	
+
+	display: inline-block;
+	
+
+	border-radius: 9999em;
+	
+
+	*:not(span) {
+		position: relative;
+		display: inherit;
+		border-radius: inherit;
+		margin: 0;
+		border: none;
+		outline: none;
+		padding: 0 .325em;
+		z-index: 1; 
+		
+		&:focus + span {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	
+	span {
+		
+		transform: scale(.993, .94); 
+		transition: transform .5s, opacity .25s;
+		opacity: 0;
+		
+		position:absolute;
+		z-index: 0; 
+		margin:4px; 
+        left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		border-radius: inherit;
+		pointer-events: none; 
+		box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	}
+	
+}
+
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	line-height:1.5;
+	font-size:1em;
+}
+
+body {
+	text-align: center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+html, body {
+	height:100%;
+}
+
+input {
+	font-family: inherit;
+	line-height:inherit;
+	color:#2e3750;
+	min-width:12em;
+}
+
+::placeholder {
+	color:#cbd0d5;
+}
+
+html::after {
+	content:'';
+	background: linear-gradient(21deg, #10abff, #1beabd);
+	height:3px;
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+label {
+	font-size: 190%;
+	color:brown;
+    background-color: rgba(0, 0, 0, 0.378);
+    font-family:Cursive;
+  }
+  

@@ -1,0 +1,125 @@
+<div class="container">
+  <!-- <img src="assets/images/item.jpg" height=400px width=300px class="card-img-top" alt="HTML"> -->
+
+  <!-- <button
+        (click)="additems(id.value, name.value, age.value, species.value)"
+        class="btn btn-outline-info"
+      >
+        Add item
+      </button> -->
+
+  <!-- <div class="container">
+        <div class="input-group">
+          <label class="input-group__label" for="myInput">My Label</label>
+          <input
+            type="text"
+            id="myInput"
+            class="input-group__input"
+            value="This is my input"
+          />
+        </div>
+      </div>
+      <br /> -->
+
+  <!-- <div class="form-group">
+      <label for="id">ID</label>
+      <p>
+        <span class="input">
+          <input
+            type="text"
+            id="id"
+            placeholder="Gradient bitem focus fun"
+            #id
+          />
+          <span></span>
+        </span>
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <p>
+        <span class="input">
+          <input
+            type="text"
+            id="name"
+            placeholder="Gradient bitem focus fun"
+            #name
+          />
+          <span></span>
+        </span>
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="age">Color</label>
+      <p>
+        <span class="input">
+          <input
+            type="text"
+            id="age"
+            placeholder="Gradient bitem focus fun"
+            #age
+          />
+          <span></span>
+        </span>
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="species">species</label>
+      <p>
+        <span class="input">
+          <input
+            type="text"
+            id="species"
+            placeholder="Gradient bitem focus fun"
+            #species
+          />
+          <span></span>
+        </span>
+      </p>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-success"
+      (click)="additems(id.value, name.value, age.value, species.value)"
+    >
+      Save
+    </button> -->
+  <!-- <button type="submit" class="btn btn-success"  (click)="updateitem(item.id, jdata)">Update item</button> -->
+
+  <div class="card-container">
+    <div *ngFor="let item of items" class="card">
+      <!-- <img
+        [src]="item.items.image"
+        alt="{{ item.name }}"
+        class="card-img-top"
+      /> -->
+
+      <div class="card-body">
+        <div><img [src]="item.water" class="card-img-top" /></div>
+        <div class="one">
+          <!-- <p class="card-text">{{ item.image }}</p> -->
+          <h5 class="card-title">{{ item.name }}</h5>
+        </div>
+        <div class="one">
+          <p class="card-text">{{ item.quantity }}</p>
+          <p class="card-text">{{ item.price }}</p>
+        </div>
+        <div class="one">
+          <p class="card-text">{{ item.itemValue }}</p>
+        </div>
+
+        <div class="buttons">
+          <button class="btn btn-outline-danger" (click)="delete(item.id)">
+            delete
+          </button>
+
+          <!-- <button class="btn btn-outline-warning" (click)="additems(item.id)"> -->
+          <!-- additems
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header></header>
+<router-outlet> </router-outlet>

@@ -1,0 +1,256 @@
+/* .background{
+  
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    
+    }
+
+.navbar-brand{
+    color:rgb(170, 170, 248);
+  }
+  .container-fluid{
+    background-color: rgb(65, 125, 9);
+  }
+  .nav-link active{
+    color:rgb(170, 170, 248);
+  }
+  .details{
+    
+  
+  }
+  .footer{
+    bottom: 0%;
+    background-color: rgb(55, 55, 250);
+}
+
+  .card-body{
+    position: absolute;
+    top:90%;
+    left:30%;
+
+  }
+  .list-group{
+    top:0;
+    left:30%;
+  }
+ 
+  .card{
+    position: absolute;
+    top:30%;
+    left:30%;
+    
+  }
+  #container {
+   flex: 1;
+   padding-bottom: 800px;
+   width: 100%;
+
+  }
+ 
+ 
+.navi{
+  text-decoration-color: aliceblue;
+  color: aliceblue;
+}
+.navi2{
+  text-decoration-color: aliceblue;
+  color: aliceblue;
+  text-align: right;
+}
+.buttondet{
+  text-align: right;
+  float:right;
+  justify-content: space-between;
+}
+.imageclass{
+  width: 100%;
+  height: 200px;;
+  background-repeat: no-repeat;
+
+} */
+* {
+	box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(260, 100%, 80%);
+}
+
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	place-items: center;
+	background-color: #222;
+	font-family: system-ui, sans-serif;
+}
+
+nav,
+.nav-item {
+	display: flex;
+}
+
+nav {
+	border-radius: 6px;
+	background-image: linear-gradient(
+		rgb(48, 48, 48) 13%,
+		rgb(30, 30, 30) 40%,
+		#0c0d11 86%
+	);
+	color: rgba(255, 255, 255, 0.6);
+	text-shadow: 0 -2px 0 black;
+	cursor: pointer;
+	box-shadow: 1px 2px 4px rgb(20, 20, 20), 0 4px 12px rgb(10, 10, 10);
+}
+
+.nav-item {
+	flex-direction: row-reverse;
+	font-size: 0.8999rem;
+	line-height: 1rem;
+	align-items: center;
+	min-width: 120px;
+	justify-content: space-between;
+	transition: all 80ms ease;
+}
+	&.active {
+		color: var(--primary);
+		text-shadow: 0 0 3px hsla(260, 100%, 70%, 0.7);
+	}
+
+	&:not(.active):hover {
+		color: rgba(255, 255, 255, 0.87);
+	}
+
+	&:hover > .icon .subicon {
+		height: 32px;
+		width: 32px;
+		border-radius: 32px;
+		top: -16px;
+		right: -16px;
+		border-color: white;
+	}
+
+	&:not(:first-of-type) {
+		border-left: 1px solid rgb(60, 60, 60);
+	}
+	&:not(:last-of-type) {
+		border-right: 0.1rem solid black;
+	}
+
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		padding: 1ch;
+	}
+
+	.icon {
+		padding: 1ch;
+		position: relative;
+
+		.subicon {
+			text-shadow: none;
+			transition: all 40ms ease;
+			position: absolute;
+			top: -3px;
+			right: -3px;
+			background: red;
+			color: white;
+			box-shadow: 0 0 4px rgba(41, 41, 41, 0.405);
+			width: 18px;
+			height: 18px;
+			border-radius: 14px;
+			font-size: 0.7em;
+			font-weight: 700;
+			display: inline-grid;
+			place-items: center;
+			border: 2px solid mix(white, red);
+		}
+	}
+
+	.icon > svg {
+		max-width: 16px;
+	}
+	#myVideo {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+	  }
+	  
+	  /* Add some content at the bottom of the video/page */
+	  .content {
+		position: fixed;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		color: #f1f1f1;
+		width: 100%;
+		padding: 20px;
+	  }
+	  
+	  /* Style the button used to pause/play the video */
+	  #myBtn {
+		width: 200px;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+		background: #000;
+		color: #fff;
+		cursor: pointer;
+	  }
+	  
+	  #myBtn:hover {
+		background: #ddd;
+		color: black;
+	  }
+	  .navcontent {
+		position: fixed;
+		top: 0;
+		background: rgba(0, 0, 0, 0.5);
+		color: #f1f1f1;
+		width: 100%;
+		padding: 20px;
+	  }
+	  .disabled {
+		pointer-events: none;
+		opacity: 0.5;
+		background: #CCC;
+	  }
+	  .cideo{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	  }
+	  .container {
+		position: relative;
+		max-width: 800px; /* Maximum width */
+		margin: 0 auto; /* Center it */
+	  }
+	  
+	  .container .content {
+		position: absolute; /* Position the background text */
+  		top: 10%;
+  		left: 50%;
+ 		 transform: translate(-50%, -50%);/* At the bottom. Use top:0 to append it to the top */
+		background: rgb(0, 0, 0); /* Fallback color */
+		background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+		color: #f1f1f1; /* Grey text */
+		width: 100%; /* Full width */
+		padding: 20px; /* Some padding */
+	  }
+
+
+
